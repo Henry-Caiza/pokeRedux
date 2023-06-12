@@ -27,7 +27,7 @@ function PokemonList({ pokemons, searchedPokemons, }) {
     }
 
     return (
-        <div className={`grid grid-flow-row grid-cols-5  gap-x-8 gap-y-12 w-full mt-12 `}>
+        <div className={`grid grid-flow-row grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-9 sm:gap-x-8 sm:gap-y-12 w-full mt-12`}>
             {typeOfListPokemons(pokemons)}
         </div>
     )
