@@ -7,8 +7,8 @@ function BarStats({ hp, color, name }) {
     // console.log(typeof (porcentaje(hp)), porcentaje(hp));
     return (
         <div className='grid grid-cols-2 gap-x-2 h-10 items-center'>
-            <p className='self-start text-violet-300 text-sm font-medium first-letter:uppercase'>{name + ': '} <span className='font-normal'>{hp}</span></p>
-            <div className={`w-24 h-4 bg-white mb-4 `} >
+            <p className='self-start text-violet-300 max-sm:text-xs text-sm font-medium first-letter:uppercase'>{name + ': '} <span className='font-normal'>{hp}</span></p>
+            <div className={`w-auto h-2  md:h-4 bg-white mb-4 `} >
                 <div className={`${color} ${porcentaje(hp)} h-full rounded-l-full}`} />
             </div>
         </div>

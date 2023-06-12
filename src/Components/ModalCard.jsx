@@ -25,7 +25,7 @@ function ModalCard({ name, visible, handleOnModal, image, types, stats }) {
             className={`${visible ? 'fixed top-0 right-0 w-full h-full z-10 bg-gray-800/90 flex justify-center items-center transition duration-150 ease-out' : 'hidden'}`}
             onClick={handleOnModal}
         >
-            <div className="bg-violet-900 w-2/5 h-5/6 flex flex-col p-4 rounded-lg">
+            <div className="bg-violet-900 w-5/6 lg:w-2/5 lg:h-5/6 flex flex-col p-4 rounded-lg">
                 <div className="flex justify-between items-center ">
                     <h2 className="text-violet-50 first-letter:uppercase text-center font-bold text-lg">
                         {name}
@@ -38,7 +38,7 @@ function ModalCard({ name, visible, handleOnModal, image, types, stats }) {
                 </div>
                 <img src={image} alt="" className="w-80 self-center drop-shadow-[0px_0px_20px_#000] " />
                 <p className='text-violet-200 mt-4 sm:mt-6 text-xs sm:text-base font-medium self-start mb-2 sm:mb-4 first-letter:uppercase'>{types}</p>
-                <div className="grid grid-cols-2 border border-violet-500 px-4 pt-4 pb-0.5 gap-x-1 rounded-lg mt-1" >
+                <div className="grid max-sm:grid-cols-1 grid-cols-2 border border-violet-500 px-4 pt-4 pb-0.5  rounded-lg mt-1 gap-x-8" >
                     {
                         stats.map((stat, index) => {
                             return (
