@@ -42,9 +42,9 @@ function PokemonList({ pokemons, searchedPokemons, }) {
                 <div className={`${isChecked ? 'hidden' : 'grid'} grid-flow-row grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-9 sm:gap-x-8 sm:gap-y-12 w-full mt-12 `}>
                     {typeOfListPokemons(searchedPokemons)}
                 </div>
-                <div className='w-2/10 flex gap-4 items-center justify-center absolute -top-8 right-0  sm:mr-0  '>
-                    <label htmlFor="favorites" className='text-violet-100 '>&#9825; Favorites</label>
-                    <input type="checkbox" id='favorites' className='sm:w-4 sm:h-4' name='favorites' checked={isChecked}
+                <div className='w-2/10 flex sm:gap-4 gap-1 items-center justify-center absolute -top-8 right-0 mr-2 sm:mr-0 '>
+                    <label htmlFor="favorites" className='text-violet-100  text-xs sm:text-base'>&#9825; Favorites</label>
+                    <input type="checkbox" id='favorites' name='favorites' className='sm:w-4 sm:h-4' checked={isChecked}
                         onChange={() => {
                             setIsChecked((prev) => !prev)
                         }} />
