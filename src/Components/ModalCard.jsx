@@ -5,10 +5,10 @@ import { XMarkIcon } from '@heroicons/react/24/solid'
 
 function ModalCard({ name, visible, handleOnModal, image, types, stats }) {
     let hp = 78
-    console.log(stats);
+    //console.log(stats);
     const currentPokemon = useSelector((state) => state.pokemonOnModal)
     //console.log(visible);
-    console.log(currentPokemon);
+    //console.log(currentPokemon);
     const colores = [
         "bg-green-600",
         "bg-red-600",

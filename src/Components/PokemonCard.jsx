@@ -16,7 +16,7 @@ function PokemonCard({ name, image, types, id, isFavorite, stats }) {
     const handleOnFavorite = () => {
 
         dispatch(setFavorite({ pokemonId: id }))
-        console.log(name);
+        //console.log(name);
     }
 
     const handleOnModal = () => {
@@ -26,7 +26,7 @@ function PokemonCard({ name, image, types, id, isFavorite, stats }) {
 
 
     return (
-        <div className="bg-gradient-to-b from-violet-950 to-violet-900 border flex flex-col items-center relative border-violet-800 rounded-md sm:rounded-xl p-3" >
+        <div className="bg-gradient-to-b  from-violet-950 to-violet-900 border flex flex-col items-center relative border-violet-800 rounded-md sm:rounded-xl p-3" >
             <div className=' bg-violet-600 w-5/6 py-1 px-1 sm:px-3 rounded-full absolute -top-3'>
                 <h2 className=' text-violet-50 first-letter:uppercase text-center font-semibold text-xs lg:text-sm xl:text-base'>{name}</h2>
             </div>

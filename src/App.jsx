@@ -26,24 +26,18 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchPokemonsWithDetails())
-    // const fetchPokemons = async () => {
-    //   dispach(setLoading(true))
-    //   const pokemonsRes = await getPokemon()
-    //   dispach(getPokemonsWithDetails(pokemonsRes))
-    //   dispach(setLoading(false))
-    // }
-    // fetchPokemons()
+
   }, [])
 
   return (
     <Layout>
-      {/* <ModalCard pokemons={pokemons} searchedPokemons={searchedPokemons} /> */}
+
       <Header />
       {
         loading ? <LoadingSkeleton /> :
           <PokemonList pokemons={pokemons} searchedPokemons={searchedPokemons} />
       }
-      {/* <ModalCard /> */}
+
     </Layout>
   )
 }

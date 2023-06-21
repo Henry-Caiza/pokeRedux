@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-skelton {
+    background-image: linear-gradient(90deg,
+            #ccc 0px,
+            rgb(229 229 229/90%) 60px,
+            #ccc 80px);
+    background-size: 300%;
+    background-position: 100% 0;
+
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: -100% 0;
+    }
+}

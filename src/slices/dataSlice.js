@@ -4,6 +4,7 @@ import { setLoading } from "./uiSlice";
 
 
 const initialState = {
+    pokemonsFavorites: [],
     pokemons: [],
     pokemonsFiltered: [],
     pokemonOnModal: {
@@ -35,7 +36,9 @@ export const dataSlice = createSlice({
             const currentPokemonIndex = state.pokemons.findIndex((pokemon) => {
                 return pokemon.id === action.payload.pokemonId;
             });
-
+            // [...state.pokemonsFavorites, state.pokemons[currentPokemonIndex].isFavorite]
+            console.log(state.pokemons);
+            console.log([...state.pokemonsFavorites, state.pokemons[currentPokemonIndex].isFavorite]);
             const currentFilteredPokemonIndex = state.pokemonsFiltered.findIndex((pokemon) => {
                 return pokemon.id === action.payload.pokemonId;
             });
@@ -61,7 +64,9 @@ export const dataSlice = createSlice({
             const pokemonOnModal = findPokemon(state.pokemons, action.payload)
             return { ...state, pokemonOnModal: pokemonOnModal }
         }
+
     },
+
 });
 
 const findPokemon = (pokemonList, id) => {
